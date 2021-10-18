@@ -1,12 +1,11 @@
 import React from 'react'
 import Button from '@mui/material/Button'
 
- const ButtonDev = ({ nameButon, text }) =>{
+ const ButtonDev = ({ nameButon, text, variantButton }) =>{
     return (
-        <div>
-            <p>{text}</p>
-            <Button >{nameButon}</Button>
-        </div>
+        <>
+            <Button type="default"  size="large"  variant={variantButton} >{nameButon}</Button>
+        </>
     )
 }
 

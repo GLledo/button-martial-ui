@@ -4,7 +4,10 @@ import ButtonDev from './ButtonDev'
 export default function Home() {
     return (
         <div>
-            <ButtonDev text="<button />" nameButon="Default" Contained variant="Contained" />  
+            <div>
+                <p>{'\u0062'} Button  & </p>
+                <ButtonDev text="<button />" nameButon="Default" variantButton="contained" />  
+            </div>
         </div>
     )
 }
