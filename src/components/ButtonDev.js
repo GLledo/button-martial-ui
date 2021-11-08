@@ -1,8 +1,9 @@
 import React from 'react'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import Button from '@mui/material/Button'
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
 
+// Theme for button color 
 const theme = createTheme({
   palette: {
     primary: {
@@ -11,11 +12,14 @@ const theme = createTheme({
     secondary: {
       main: '#1565c0',
     },
+    danger: {
+      main: '#FF0000 '
+    }
   },
-});
+})
 
-
- const ButtonDev = ({ nameButon, variantButton, colorBg ,simplified, positionIcon}) =>{
+//Reusable button done with materialUI
+ const ButtonDev = ({ nameButon, variantButton, colorBg ,simplified, positionIcon, tam}) =>{
 
   console.log(simplified)
     return (
@@ -23,20 +27,20 @@ const theme = createTheme({
       simplified ?(
           positionIcon ?(
             <ThemeProvider theme={theme}>
-              <Button type="default"  size="large" color={colorBg}  variant={variantButton} startIcon={<AddShoppingCartIcon />}>{nameButon}</Button>
+              <Button type="default"  size={tam} color={colorBg}  variant={variantButton} startIcon={<AddShoppingCartIcon />}>{nameButon}</Button>
             </ThemeProvider>
           )
           :
           (
             <ThemeProvider theme={theme}>
-              <Button type="default"  size="large" color={colorBg}  variant={variantButton} endIcon={<AddShoppingCartIcon />}>{nameButon}</Button>
+              <Button type="default"  size={tam} color={colorBg}  variant={variantButton} endIcon={<AddShoppingCartIcon />}>{nameButon}</Button>
             </ThemeProvider>
           )
         )
         :
         (
           <ThemeProvider theme={theme}>
-            <Button type="default"  size="large" color={colorBg}  variant={variantButton} >{nameButon}</Button>
+            <Button type="default"  size={tam} color={colorBg}  variant={variantButton} >{nameButon}</Button>
           </ThemeProvider>
         )
     )
